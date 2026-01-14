@@ -1,3 +1,22 @@
+/**
+ * Fallout Terminal Theme - Clean Design
+ * 
+ * This stylesheet provides a retro terminal aesthetic inspired by
+ * the Fallout franchise, without animations or heavy effects.
+ * 
+ * Design Features:
+ * - Green phosphor text (#00FF41) on black background
+ * - Amber highlights (#FFB000) for important elements
+ * - Monospace fonts (Courier New)
+ * - Simple borders for terminal-style containers
+ * - Clean, minimal design without animations
+ * 
+ * Customization:
+ * - Adjust colors in :root CSS variables
+ * - Change fonts in body selector
+ * - Modify border styles for different look
+ */
+
 /* Simple Terminal Theme - Clean Design */
 
 :root {

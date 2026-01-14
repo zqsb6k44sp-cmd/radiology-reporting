@@ -1,12 +1,28 @@
+/**
+ * Main Application Logic for Radiology USG Report Generation System
+ * 
+ * This file handles:
+ * - User interface interactions
+ * - Template selection and loading
+ * - Patient data form management
+ * - Report creation, editing, and saving
+ * - Draft management
+ * - Report repository display
+ * - Print functionality
+ * 
+ * Dependencies: storage.js, auth.js, templates.js
+ */
+
 // Main Application Logic
 
 const App = {
-    currentTemplate: null,
-    currentDraft: null,
-    currentReport: null,
+    currentTemplate: null,      // Currently selected template ID
+    currentDraft: null,          // Currently loaded draft object
+    currentReport: null,         // Currently viewed report object
+    currentPatientData: null,    // Current patient data from form
 
     init() {
-        // Check authentication
+        // Check authentication - redirect to login if not authenticated
         if (!AuthManager.requireAuth()) return;
 
         // Display user info

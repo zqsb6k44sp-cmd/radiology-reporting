@@ -1,3 +1,19 @@
+/**
+ * Authentication Logic
+ * 
+ * Handles user authentication and authorization for the application.
+ * 
+ * Features:
+ * - Login/logout functionality
+ * - Session management using localStorage
+ * - Role-based access control (doctor/admin)
+ * - Page access protection
+ * 
+ * Security Note: This is a client-side only authentication system
+ * suitable for personal use. For production, implement server-side
+ * authentication with proper session management and HTTPS.
+ */
+
 // Authentication Logic
 
 const AuthManager = {

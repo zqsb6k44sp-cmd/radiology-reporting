@@ -1,3 +1,27 @@
+/**
+ * USG Report Templates
+ * 
+ * This file contains pre-defined templates for various ultrasound examinations.
+ * Each template includes:
+ * - Template ID (unique identifier)
+ * - Name (display name)
+ * - Description (brief description of the examination)
+ * - Template content with placeholders for patient data
+ * 
+ * Placeholders are marked with {{variableName}} and are replaced with actual
+ * patient data when the template is loaded into the editor.
+ * 
+ * Available placeholders:
+ * - {{patientName}} - Patient's full name
+ * - {{age}} - Patient's age or date of birth
+ * - {{gender}} - Patient's gender
+ * - {{examDate}} - Date of examination
+ * - {{referringDoctor}} - Name of referring physician
+ * - {{clinicalHistory}} - Clinical indication/history
+ * - {{doctorName}} - Reporting radiologist's name
+ * - {{reportDate}} - Report generation date
+ */
+
 // USG Report Templates
 
 const USGTemplates = {

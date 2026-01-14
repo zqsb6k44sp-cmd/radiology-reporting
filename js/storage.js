@@ -1,3 +1,23 @@
+/**
+ * Local Storage Management for Reports and Users
+ * 
+ * This module handles all data persistence using browser's localStorage.
+ * 
+ * IMPORTANT: This localStorage implementation is for personal/development use only.
+ * For production deployment, replace these functions with API calls to a backend server
+ * with proper database storage and security measures.
+ * 
+ * Storage Structure:
+ * - usg_reports: Array of finished reports
+ * - usg_users: Array of user accounts
+ * - current_user: Currently logged-in user object
+ * - usg_drafts: Array of draft reports
+ * 
+ * Security Note: Passwords are stored in plain text in localStorage.
+ * This is NOT secure and should only be used for demonstration purposes.
+ * In production, use proper authentication with hashed passwords on the backend.
+ */
+
 // Local Storage Management for Reports and Users
 
 const StorageManager = {
