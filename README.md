@@ -1,18 +1,21 @@
 # RobCo Industries Medical Terminal System
-
 ## Radiology USG Report Generation System
 
-A Fallout-themed radiology report generation application for personal medical use.
+Fallout-themed radiology report generation software for personal use.
 
-### Status
-🚧 Under construction - Initial setup in progress
+### Features
+- Terminal-style interface inspired by Fallout franchise
+- Split-screen editor and template selection
+- Multiple USG report templates
+- Patient data management
+- Draft and finish workflow
+- Print functionality
+- Doctor and Admin access levels
+- Report repository
 
-### Features (Coming Soon)
-- 🖥️ Fallout terminal-style interface
-- 📝 USG report editor with templates
-- 🔐 Doctor and admin access control
-- 📋 Report repository and management
-- 🖨️ Professional report printing
+### Setup
+Coming soon...
 
----
-**RobCo Industries - Because War Never Changes, But Healthcare Does**
+This repository is being built by GitHub Copilot.
+Current Date and Time (UTC - YYYY-MM-DD HH:MM:SS formatted): 2026-01-14 10:32:31
+Current User's Login: zqsb6k44sp-cmd
