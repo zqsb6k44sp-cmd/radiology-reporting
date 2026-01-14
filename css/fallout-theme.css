@@ -1,0 +1,328 @@
+/**
+ * Fallout Terminal Theme - Clean Design
+ * 
+ * This stylesheet provides a retro terminal aesthetic inspired by
+ * the Fallout franchise, without animations or heavy effects.
+ * 
+ * Design Features:
+ * - Green phosphor text (#00FF41) on black background
+ * - Amber highlights (#FFB000) for important elements
+ * - Monospace fonts (Courier New)
+ * - Simple borders for terminal-style containers
+ * - Clean, minimal design without animations
+ * 
+ * Customization:
+ * - Adjust colors in :root CSS variables
+ * - Change fonts in body selector
+ * - Modify border styles for different look
+ */
+
+/* Simple Terminal Theme - Clean Design */
+
+:root {
+    --terminal-green: #00FF41;
+    --terminal-amber: #FFB000;
+    --terminal-bg: #000000;
+    --terminal-border: #00FF41;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: var(--terminal-bg);
+    color: var(--terminal-green);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Main Container */
+.terminal-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+.terminal-header {
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--terminal-border);
+    margin-bottom: 20px;
+}
+
+.terminal-header h1 {
+    font-size: 2em;
+    letter-spacing: 2px;
+}
+
+.terminal-header p {
+    font-size: 0.9em;
+    margin-top: 5px;
+    color: var(--terminal-amber);
+}
+
+/* Split Screen Layout */
+.split-container {
+    display: flex;
+    gap: 20px;
+    min-height: 600px;
+}
+
+.editor-panel,
+.template-panel {
+    flex: 1;
+    border: 1px solid var(--terminal-border);
+    padding: 15px;
+}
+
+.panel-header {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--terminal-border);
+    color: var(--terminal-amber);
+}
+
+/* Form Elements */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--terminal-amber);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    background-color: #000;
+    border: 1px solid var(--terminal-border);
+    color: var(--terminal-green);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.95em;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: 1px solid var(--terminal-amber);
+}
+
+/* Editor */
+.report-editor {
+    width: 100%;
+    min-height: 400px;
+    padding: 10px;
+    background-color: #000;
+    border: 1px solid var(--terminal-border);
+    color: var(--terminal-green);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.95em;
+    resize: vertical;
+    white-space: pre-wrap;
+}
+
+.report-editor:focus {
+    outline: 1px solid var(--terminal-amber);
+}
+
+/* Buttons */
+.terminal-button {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #000;
+    border: 1px solid var(--terminal-border);
+    color: var(--terminal-green);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.terminal-button:hover {
+    background-color: var(--terminal-green);
+    color: #000;
+}
+
+.terminal-button.secondary {
+    border-color: var(--terminal-amber);
+    color: var(--terminal-amber);
+}
+
+.terminal-button.secondary:hover {
+    background-color: var(--terminal-amber);
+    color: #000;
+}
+
+.button-group {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* Template List */
+.template-list {
+    list-style: none;
+}
+
+.template-item {
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid var(--terminal-border);
+    cursor: pointer;
+}
+
+.template-item:hover {
+    border-color: var(--terminal-amber);
+}
+
+.template-item.active {
+    border-color: var(--terminal-amber);
+    background-color: #001a00;
+}
+
+.template-item h3 {
+    color: var(--terminal-amber);
+    margin-bottom: 5px;
+}
+
+.template-item p {
+    font-size: 0.85em;
+}
+
+/* Report List */
+.report-list {
+    list-style: none;
+}
+
+.report-item {
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid var(--terminal-border);
+    cursor: pointer;
+}
+
+.report-item:hover {
+    border-color: var(--terminal-amber);
+}
+
+.report-item .report-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.report-item .patient-name {
+    color: var(--terminal-amber);
+    font-weight: bold;
+}
+
+.report-item .report-date {
+    color: var(--terminal-green);
+}
+
+.report-item .report-info {
+    font-size: 0.85em;
+    color: var(--terminal-green);
+}
+
+/* Login Page */
+.login-container {
+    max-width: 500px;
+    margin: 100px auto;
+    padding: 40px;
+    background-color: #000;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.login-header h1 {
+    font-size: 2em;
+    color: var(--terminal-amber);
+}
+
+/* Messages */
+.message {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid var(--terminal-border);
+}
+
+.message.error {
+    border-color: #ff0000;
+    color: #ff0000;
+}
+
+.message.success {
+    border-color: var(--terminal-green);
+    color: var(--terminal-green);
+}
+
+.message.info {
+    border-color: var(--terminal-amber);
+    color: var(--terminal-amber);
+}
+
+/* Search Bar */
+.search-bar {
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    background-color: #000;
+    border: 1px solid var(--terminal-border);
+    color: var(--terminal-green);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+}
+
+/* Utility Classes */
+.hidden {
+    display: none !important;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .split-container {
+        flex-direction: column;
+    }
+    
+    .terminal-container {
+        margin: 10px;
+        padding: 10px;
+    }
+    
+    .button-group {
+        flex-direction: column;
+    }
+    
+    .terminal-button {
+        width: 100%;
+    }
+}

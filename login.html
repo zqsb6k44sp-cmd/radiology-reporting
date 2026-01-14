@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RobCo Industries Medical Terminal - Login</title>
+    <link rel="stylesheet" href="css/fallout-theme.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-header">
+            <h1>ROBCO INDUSTRIES (TM) TERMLINK</h1>
+            <p>RADIOLOGY REPORTING SYSTEM v2.1</p>
+            <p style="margin-top: 15px;">!!! WARNING: AUTHORIZED PERSONNEL ONLY !!!</p>
+        </div>
+
+        <div id="messageContainer"></div>
+
+        <form id="loginForm" onsubmit="return false;">
+            <div class="form-group">
+                <label for="username">USERNAME:</label>
+                <input type="text" id="username" required autofocus>
+            </div>
+
+            <div class="form-group">
+                <label for="password">PASSWORD:</label>
+                <input type="password" id="password" required>
+            </div>
+
+            <div class="button-group text-center">
+                <button type="submit" class="terminal-button">[ LOGIN ]</button>
+            </div>
+        </form>
+
+        <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--terminal-border); font-size: 0.85em;">
+            <p style="color: var(--terminal-amber);">TEST ACCOUNTS:</p>
+            <p>Doctor: dr.smith / password123</p>
+            <p>Doctor: dr.jones / password123</p>
+            <p>Admin: admin / admin</p>
+        </div>
+    </div>
+
+    <script src="js/storage.js"></script>
+    <script src="js/auth.js"></script>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            const result = AuthManager.login(username, password);
+
+            if (result.success) {
+                // Redirect based on role
+                if (result.user.role === 'admin') {
+                    window.location.href = 'admin.html';
+                } else {
+                    window.location.href = 'index.html';
+                }
+            } else {
+                const messageContainer = document.getElementById('messageContainer');
+                messageContainer.innerHTML = '<div class="message error">!!! ACCESS DENIED !!! Invalid credentials.</div>';
+                
+                setTimeout(() => {
+                    messageContainer.innerHTML = '';
+                }, 3000);
+            }
+        });
+    </script>
+</body>
+</html>
