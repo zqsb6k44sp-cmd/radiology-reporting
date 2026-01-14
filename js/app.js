@@ -57,19 +57,21 @@ const App = {
                 <p>${template.name}</p>
                 <p style="font-size: 0.8em;">${template.description}</p>
             `;
-            li.onclick = () => this.selectTemplate(template.id);
+            li.onclick = (e) => this.selectTemplate(template.id, e);
             templatesList.appendChild(li);
         });
     },
 
-    selectTemplate(templateId) {
+    selectTemplate(templateId, event) {
         this.currentTemplate = templateId;
 
         // Highlight selected template
         document.querySelectorAll('.template-item').forEach(item => {
             item.classList.remove('active');
         });
-        event.target.closest('.template-item').classList.add('active');
+        if (event) {
+            event.target.closest('.template-item').classList.add('active');
+        }
 
         // Show patient data form
         this.showPatientDataForm();
